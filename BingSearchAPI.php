@@ -42,7 +42,7 @@ class BingSearchAPI
      * @param string $type
      * @param string $q
      */
-    private function search($type = "Web", $q = '')
+    public function search($type = "Web", $q = '')
     {
         $this->buildQuery = $type . "?Query=" . urlencode("'$q'");
     }
