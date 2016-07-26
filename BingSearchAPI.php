@@ -95,6 +95,7 @@ class BingSearchAPI
         $url = self::API_URL . $this->buildQuery . '&$format=json';
         $response = file_get_contents($url, 0, $this->context);
         $jsonOjb = json_decode($response);
+        $this->buildQuery = "";
         return $jsonOjb->d->results;
     }
 
